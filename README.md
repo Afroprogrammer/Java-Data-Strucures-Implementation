@@ -10,4 +10,4 @@ I assume that the reader knows Java at an intermediate level, i would do my best
 - [Data Structures](#data-structures)
 
 ## Data Structures
-* [Arrays](src/main/java/dataStructures/AnArray.java)
+* [Arrays](master/src/main/java/dataStructures/Arrays/AnArray.java)
