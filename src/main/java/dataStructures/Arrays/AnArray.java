@@ -1,4 +1,4 @@
-package dataStructures;
+package dataStructures.Arrays;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
