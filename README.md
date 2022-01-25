@@ -12,3 +12,4 @@ I assume that the reader knows Java at an intermediate level, i would do my best
 ## Data Structures
 * [Arrays](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/Arrays/AnArray.java)
 * [ArrayList](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/tree/master/src/main/java/dataStructures/ArrayList)
+* [Stack](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/Stack/MyStack.java)
