@@ -1,0 +1,17 @@
+// Queue is also a sequential data structure that is designed for holding elements prior to processing
+// it follows the FIFO methodology, Its also an ordered list in which insertion is done at one end and deletion
+is done at the other end
+
+
+//Application of queues
+- Cpu scheduling
+--Asynchronous Data Transfer
+- Handling of Interrupts etc.
+
+Big O complexities of A Queue
+
+Insertion - O(1)
+Deletion  - O(1)
+Accessing - O(n)
+Searching - O(n)
+
