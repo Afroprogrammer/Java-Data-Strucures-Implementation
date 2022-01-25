@@ -1,0 +1,26 @@
+ArrayList also known as a growing array setting a size would give it an array of size 10 arraylist and it comes with
+methods out of the box includes the Add Method, Set Method, Remove Method, Get Method, Clear Method, ToArray method
+It takes objects as elements in the List and uses autoboxing to modify entries with primitive type.
+
+In Java arrayList implements the list interface
+
+When an element is added to an ArrayList it first checks whether the new element has room to fill or it needs to grow
+the size of the internal array, If capacity has to be increased then the new capacity is calculated which is 50% more
+than the old capacity and the array is increased by that capacity.
+
+Big O of arrayList
+Accessing O(1)
+Removing  O(n)
+Insertion 0(n)
+Searching 0(n)
+
+//pros and cons of an arraylist
+
+//pros
+it has flexible and variable length
+when an arraylist exceeds its capacities it increases by 50%
+
+//cons
+it has slow performance as compared to an array
+
+
