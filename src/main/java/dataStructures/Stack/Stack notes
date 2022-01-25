@@ -1,0 +1,16 @@
+//Stacks
+ the stack data structure implements the first in last or last in first out stack of objects
+ the methods you can get on the stack is the push, pop, peek, contains method
+ Its a part of the linear or sequential data structures and does not have random, access
+ Inserting and deletion are done at one end
+
+ //Big O notations
+ Accessing - O(n)
+ Inserting - 0(1)
+ Searching - O(n)
+ Deletion - 0(1)
+
+ //use cases of stacks
+ recursion
+redo and undo on word processing
+Back paging on a web page
