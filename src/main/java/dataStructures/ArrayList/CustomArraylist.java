@@ -80,6 +80,7 @@ public class CustomArraylist {
            arr[i] = arr[i + 1];
        }
          size --;
+         System.out.println(data + "was removed");
      }
 
 
