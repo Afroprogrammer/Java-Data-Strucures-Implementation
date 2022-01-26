@@ -1,0 +1,21 @@
+Singly Linked List
+
+//overview
+Singly linked list is  a linear data structure used for storing collections of nodes.
+ a node has data and reference to next node in the list. The first node is the head node.
+
+In singly linked list, The Node has a pointer to the next node. it does not have a pointer to the previous node, the
+last node's pointer points to a null value.
+
+
+big O notations of linkedList
+Accessing   - O(n)
+Deleting   - O(1)/O(n)
+Searching - O(n)
+Inserting  - O(1)/ O(n)
+
+//Application of linked List
+Used to implement Stack and queue
+Implement Adjacency list representation of graphs
+-Used in Image viewer/ Music player
+-Maintaining directory names
