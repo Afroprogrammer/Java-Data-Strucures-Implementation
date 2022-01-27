@@ -6,27 +6,22 @@ public class LinkedList {
    static class Node {
         int data;  //creating the placeholder of data in the node
         Node next; //where the pointer information is stored
-
-        //creating a parameterised constructor to create a node
-
         public Node(int data){
             this.data = data;
-        }
+        }       //creating a parameterised constructor to create a node
     }
 
     //creating the head and tail of a linked list
     Node head;
     Node tail;
-
-    //creating a variable to keep the size of a node
-    int size = 0;
+    int size = 0; //creating a variable to keep the size of a node
 
     //creating a method to add to a linked list
-    public void add(int data) {
-        //if the head is null meaning there is no data in the linked List then, create a new head node
-        // and append to the linked list.
-        //else append the created node to the tail element of the linked list
+    //if the head is null meaning there is no data in the linked List then, create a new head node
+    // and append to the linked list.
+    //else append the created node to the tail element of the linked list
 
+    public void add(int data) {
         Node newNode = new Node(data); //Instantiating a new node here
             if(head == null ){
                 head = newNode;  //head would be assigned to the new node
@@ -42,8 +37,7 @@ public class LinkedList {
 
     //adding a node at a particular index
     public void add(int data, int index){
-        //if the user passed in a wrong index
-        if(index < 0 || index > (size-1)){
+        if(index < 0 || index > (size-1)){      //if the user passed in a wrong index
             System.out.println("index out of range ");
             return;
         }
@@ -71,6 +65,52 @@ public class LinkedList {
         }
         size++;
         System.out.println(this);
+    }
+
+    //removing from the list
+    public void remove(int index){
+        if(index < 0 || index > (size-1)){
+            System.out.println("index out of range ");
+            return;
+        }
+        Node currentNode = head;
+        Node prev = null;
+        int i = 0;
+
+        while (currentNode != null && i != index){
+            prev = currentNode;
+            currentNode = currentNode.next;
+            i++;
+        }
+        if(prev == null) {
+            head = head.next;
+        }else {  //inserting at a position in the linked list
+            prev.next = currentNode.next;
+        }
+        if(currentNode == tail){  //removing from the last position
+            tail = prev;
+        }
+        currentNode.next = null;
+        size--;
+        System.out.println(this);
+
+    }
+    //getting an element by index
+    public int get (int index){
+        Node currentNode = head;
+        int i = 0;
+
+        if(index < 0 || index > (size - 1)) {
+            System.out.println("index is out of range ");
+            return Integer.MIN_VALUE;
+        }
+        while (currentNode != null && i != index){
+            currentNode = currentNode.next;
+            i++;
+        }
+        return currentNode.data;
+
+
     }
 
 
@@ -102,5 +142,11 @@ public class LinkedList {
         linkedList.add(30);
         linkedList.add(90,0);
         linkedList.add(100,3);
+        System.out.println("about to remove  data at the first position");
+        linkedList.remove(0);
+        System.out.println("about to remove  data at the second position");
+        linkedList.remove(1);
+        System.out.println("about to remove  data at the second position");
+        System.out.println("2nd index data:" + linkedList.get(1));
     }
 }
