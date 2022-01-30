@@ -66,9 +66,7 @@ public class DoublyLinkedList {
             curr.prev = newNode;     //current previous node to the new node
         }
 
-
         size++; //increasing the size
-
     }
 
     public int get(int index) {
@@ -78,6 +76,20 @@ public class DoublyLinkedList {
         }
         Node target = findNode(index);
          return target.data;
+    }
+
+    public void remove(int index){
+        if (index < 0 || index > (size - 1)) {
+            System.out.println("Invalid index"); //verifying the index method
+            return;
+        }
+        Node current = findNode(index);  //using the find node method to find the target node
+        Node previousNode = current.prev; //finding the previous node of the target node;
+        Node nextNode = current.next;    //finding the current node
+
+        previousNode.next = nextNode;  //make the next and previous node next point to the nextNode
+        nextNode.prev = previousNode;  //make the next node's previous point to the previous node
+        size--; //decrease the size;
     }
 
     //utility function for find a node given the index
@@ -141,9 +153,12 @@ private  Node findNode(int index){
         ddl.add(9);
         ddl.add(79,0);
         ddl.add(90,6);
-        System.out.println("printing data from the second position " + ddl.get(2));
-
         System.out.println(ddl);
+        System.out.println("printing data from the second position ----> " + ddl.get(2));
+        System.out.println("removing the a node at  index position 2");
+        ddl.remove(2);
+        System.out.println(ddl);
+
     }
 
 
