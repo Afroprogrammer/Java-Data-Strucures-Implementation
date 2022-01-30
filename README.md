@@ -15,3 +15,4 @@ I assume that the reader knows Java at an intermediate level, i would do my best
 * [Stack](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/Stack/MyStack.java)
 * [Queue](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/Queue/MyQueue.java)
 * [LinkedList](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/singlyLinkedList/LinkedList.java)
+* [Doubly LinkedList](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/DoublyLinkedList/DoublyLinkedList.java)
