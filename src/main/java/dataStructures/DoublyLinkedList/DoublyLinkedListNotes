@@ -1,0 +1,25 @@
+//Doubly linked list are also a sequential data structure
+//Just like a linked list.. but you can traverse back and forth in the data structure
+
+Big O notations of a linked list
+
+Accessing - O(n)
+Deletion -  O(n)/O(1)
+Inserting -O(n)/O(1)
+Searching -O(n)
+
+
+Application
+//browser paging
+//redo and undo function
+//going back and forth in your spotify playlist
+linked hashmap
+
+
+//advantages of a doubly linked list as compared to a linked list
+-Traversal is in both ways
+- finding the last element with would be faster than the linked list
+- inserstion and deletion is faster than Linked list
+
+//its memory expensive
+
