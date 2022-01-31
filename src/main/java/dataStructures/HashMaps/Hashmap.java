@@ -6,6 +6,7 @@ public class Hashmap {
     class HashNode {
         String key;
         String value;
+        HashNode next; //reference that would help us chain same keys in one hashtable position.
 
         public HashNode(String key, String value) {
             this.key = key;
@@ -14,7 +15,7 @@ public class Hashmap {
     }
     //creating hash table to maintain this the hashNode in the hash map
 
-    private HashNode []  hastable = null;
+    private HashNode[] hastable = null;
     private int bucketSize = 16;
     private int size = 0; //using it to track the size of the hashtable
 
@@ -30,11 +31,24 @@ public class Hashmap {
         int position = hash(key);
         System.out.println("key - " + key);
         System.out.println("position - " + position);
-        hastable[position] = new HashNode(key, value);  //storing a hashNode in our hashtable
-        size++;
-
+        HashNode current = hastable[position];
+        //checking to see if there is no key in the current position on the hashtable
+        if (current == null) {
+            hastable[position] = new HashNode(key, value);  //if its null put in the key value at the position
+            size++;
+        } else {
+            while (current.next != null && current.key != key) {  //if the current is not null push it to the next
+                current = current.next;
+            }
+            if (current.key == key) {
+                current.value = value;
+            } else {
+                current.next = new HashNode(key, value);
+                size++;
+            }
+           //after increase the size of the hashtable
+        }
     }
-
     private int hash(String key) {
         return Math.abs(key.hashCode() % bucketSize);
     }
@@ -44,9 +58,10 @@ public class Hashmap {
         buf.append("{");
         for (int i = 0; i < bucketSize; i++) {
             HashNode node = hastable[i];
-            if (node != null) {
+            while (node != null) {
                 buf.append(node.key).append("=").append(node.value);
                 buf.append(",");
+                node = node.next;
             }
         }
         if (buf.length() > 1) {
@@ -61,6 +76,8 @@ public class Hashmap {
         map.put("one", "1");
         map.put("two", "2");
         map.put("three", "3");
+        map.put("four", "4");
+        map.put("one", "Modified value");
         System.out.println("this is the map" + map);
     }
 }
