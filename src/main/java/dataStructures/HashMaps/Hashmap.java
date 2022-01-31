@@ -50,7 +50,12 @@ public class Hashmap {
         }
     }
 
+    public String get(String key){
+        HashNode targetNode = find(key); //using the findkey method to find the target node
+        if (targetNode ==  null) return null;
+        return targetNode.value;
 
+    }
 
     public boolean contains(String key) {
         HashNode target = find(key);  //calling the find function here
@@ -70,7 +75,6 @@ public class Hashmap {
         }
         return targetNode;
     }
-
 
     private int hash(String key) {
         return Math.abs(key.hashCode() % bucketSize);
@@ -103,5 +107,7 @@ public class Hashmap {
         map.put("one", "Modified value");
         System.out.println("this is the map" + map);
         System.out.println(map.contains("ten") );
+        System.out.println(map.get("one"));
+        System.out.println(map.get("potato"));
     }
 }
