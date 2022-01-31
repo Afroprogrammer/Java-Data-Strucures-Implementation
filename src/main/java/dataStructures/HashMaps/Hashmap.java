@@ -77,6 +77,10 @@ public class Hashmap {
         return targetNode.value;
 
     }
+    public boolean isEmpty(){
+        return size == 0;
+    }
+    public void clear ()
 
     public boolean contains(String key) {
         HashNode target = find(key);  //calling the find function here
