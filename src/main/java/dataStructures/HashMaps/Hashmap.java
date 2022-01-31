@@ -15,13 +15,13 @@ public class Hashmap {
     }
     //creating hash table to maintain this the hashNode in the hash map
 
-    private HashNode[] hastable = null;
+    private HashNode[] hashtable = null;
     private int bucketSize = 16;
     private int size = 0; //using it to track the size of the hashtable
 
     //creating a constructor of a Hashmap
     public Hashmap() {
-        this.hastable = new HashNode[bucketSize];
+        this.hashtable = new HashNode[bucketSize];
         ;
     }
 
@@ -31,10 +31,10 @@ public class Hashmap {
         int position = hash(key);
         System.out.println("key - " + key);
         System.out.println("position - " + position);
-        HashNode current = hastable[position];
+        HashNode current = hashtable[position];
         //checking to see if there is no key in the current position on the hashtable
         if (current == null) {
-            hastable[position] = new HashNode(key, value);  //if its null put in the key value at the position
+            hashtable[position] = new HashNode(key, value);  //if its null put in the key value at the position
             size++;
         } else {
             while (current.next != null && current.key != key) {  //if the current is not null push it to the next
@@ -46,9 +46,32 @@ public class Hashmap {
                 current.next = new HashNode(key, value);
                 size++;
             }
-           //after increase the size of the hashtable
+            //after increase the size of the hashtable
         }
     }
+
+
+
+    public boolean contains(String key) {
+        HashNode target = find(key);  //calling the find function here
+        return target != null;
+    }
+
+    //A method to find a node when a key is passed takes a key as a parameter
+    private HashNode find(String key) {
+        int position = hash(key);    //finding the position index on a hashtable
+        HashNode targetNode = hashtable[position]; //assigning the target hashnode to the one found at the table
+        if (targetNode == null) return null;  //if there is no target node return null
+
+        else {  //if we find a target node traverse the linkedlist
+            while (targetNode != null && targetNode.key != key) {
+                targetNode = targetNode.next;
+            }
+        }
+        return targetNode;
+    }
+
+
     private int hash(String key) {
         return Math.abs(key.hashCode() % bucketSize);
     }
@@ -57,7 +80,7 @@ public class Hashmap {
         StringBuffer buf = new StringBuffer();
         buf.append("{");
         for (int i = 0; i < bucketSize; i++) {
-            HashNode node = hastable[i];
+            HashNode node = hashtable[i];
             while (node != null) {
                 buf.append(node.key).append("=").append(node.value);
                 buf.append(",");
@@ -79,5 +102,6 @@ public class Hashmap {
         map.put("four", "4");
         map.put("one", "Modified value");
         System.out.println("this is the map" + map);
+        System.out.println(map.contains("ten") );
     }
 }
