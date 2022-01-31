@@ -80,7 +80,11 @@ public class Hashmap {
     public boolean isEmpty(){
         return size == 0;
     }
-    public void clear ()
+    public void clear () {
+        size = 0;  //clear the hashtable
+        this.hashtable = new HashNode[bucketSize];
+
+    }
 
     public boolean contains(String key) {
         HashNode target = find(key);  //calling the find function here
@@ -129,6 +133,8 @@ public class Hashmap {
         map.put("two", "2");
         map.put("three", "3");
         map.put("four", "4");
+        map.put("five", "6");
+        map.put("six", "6");
         System.out.println("----------BEFORE REMOVING----------------");
         System.out.println( map);
         map.remove("one");
