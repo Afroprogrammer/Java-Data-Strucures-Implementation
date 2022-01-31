@@ -1,0 +1,13 @@
+A hashmap is a type of dictionary that use key Value pair to store information also can be called as an
+associative array.
+//Its a linear Data Structures. it stores information as key value pairs
+Its efficient in lookup. Using hashing techniques for storing hash node
+
+Advantages of a hashmap
+Faster access to data O(1)
+
+Big O notations of Dictionaries
+Accessing - O(1)/ O(n)  //since we also use hash functions we can get O(1) whereas also get 0(n) since we use linked list too
+Searching  - O(1)/ O(n)
+Deleting - O(1)/ O(n)
+Inserting - O(1)/ O(n)
