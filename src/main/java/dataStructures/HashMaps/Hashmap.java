@@ -50,6 +50,27 @@ public class Hashmap {
         }
     }
 
+    public boolean remove(String key) {
+        int position = hash(key);   //finding the position index on a hashtable
+        HashNode targetNode = hashtable[position]; //assigning the target hash-node to the node found at the table
+        HashNode prev = null;
+        HashNode curr = targetNode;
+        while(curr != null && curr.key != key)  //traversing the list
+        {
+            prev = curr;
+            curr = curr.next;
+        }
+        if(curr == null) return  false;
+        if(prev == null) {
+            hashtable[position] = curr.next;
+        } else {
+            prev.next = curr.next;
+        }
+        curr.next = null;
+        size--;
+        return true;
+    }
+
     public String get(String key){
         HashNode targetNode = find(key); //using the findkey method to find the target node
         if (targetNode ==  null) return null;
@@ -104,10 +125,12 @@ public class Hashmap {
         map.put("two", "2");
         map.put("three", "3");
         map.put("four", "4");
-        map.put("one", "Modified value");
-        System.out.println("this is the map" + map);
-        System.out.println(map.contains("ten") );
-        System.out.println(map.get("one"));
-        System.out.println(map.get("potato"));
+        System.out.println("----------BEFORE REMOVING----------------");
+        System.out.println( map);
+        map.remove("one");
+        System.out.println("----------AFTER REMOVING----------------");
+        System.out.println(map);
+
+
     }
 }
