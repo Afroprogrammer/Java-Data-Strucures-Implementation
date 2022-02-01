@@ -55,13 +55,13 @@ public class Hashmap {
         HashNode targetNode = hashtable[position]; //assigning the target hash-node to the node found at the table
         HashNode prev = null;
         HashNode curr = targetNode;
-        while(curr != null && curr.key != key)  //traversing the list
+        while (curr != null && curr.key != key)  //traversing the list
         {
             prev = curr;
             curr = curr.next;
         }
-        if(curr == null) return  false;
-        if(prev == null) {
+        if (curr == null) return false;
+        if (prev == null) {
             hashtable[position] = curr.next;
         } else {
             prev.next = curr.next;
@@ -70,20 +70,24 @@ public class Hashmap {
         size--;
         return true;
     }
+
     //a method that creates a hashnode to be implemented by a Linkedhashmap
-      public HashNode createHashNode(String key, String value ){  //takes a key and value and creates a hashnode
+    public HashNode createHashNode(String key, String value) {  //takes a key and value and creates a hashnode
         return new HashNode(key, value);
-}
-    public String get(String key){
+    }
+
+    public String get(String key) {
         HashNode targetNode = find(key); //using the findkey method to find the target node
-        if (targetNode ==  null) return null;
+        if (targetNode == null) return null;
         return targetNode.value;
 
     }
-    public boolean isEmpty(){
+
+    public boolean isEmpty() {
         return size == 0;
     }
-    public void clear () {
+
+    public void clear() {
         size = 0;  //clear the hashtable
         this.hashtable = new HashNode[bucketSize];
 
@@ -139,7 +143,7 @@ public class Hashmap {
         map.put("five", "6");
         map.put("six", "6");
         System.out.println("----------BEFORE REMOVING----------------");
-        System.out.println( map);
+        System.out.println(map);
         map.remove("one");
         System.out.println("----------AFTER REMOVING----------------");
         System.out.println(map);
