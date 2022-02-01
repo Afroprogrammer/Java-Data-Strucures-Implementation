@@ -31,12 +31,22 @@ public class LinkedHashMap  extends Hashmap {
             }
         }
 
-
-
-
-
-    // a method to add a node to our doubly linked list
-
+    @Override
+    public String toString() {
+        StringBuffer buf = new StringBuffer();
+        LinkedHashNode currentPointerNode = head;
+        buf.append("{");
+            while (currentPointerNode != null) {
+                buf.append(currentPointerNode.key).append("=").append(currentPointerNode.value);
+                buf.append(",");
+                currentPointerNode = currentPointerNode.after;
+            }
+        if (buf.length() > 1) {
+            buf.deleteCharAt(buf.length() - 1);
+        }
+        buf.append("}");
+        return buf.toString();
+    }
 
 
     public static void main(String[] args) {
