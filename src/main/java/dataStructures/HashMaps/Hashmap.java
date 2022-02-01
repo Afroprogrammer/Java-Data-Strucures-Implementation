@@ -67,6 +67,7 @@ public class Hashmap {
             prev.next = curr.next;
         }
         curr.next = null;
+        removeNode(curr);
         size--;
         return true;
     }
@@ -76,6 +77,9 @@ public class Hashmap {
         return new HashNode(key, value);
     }
 
+    public void removeNode(HashNode current){
+
+    }
     public String get(String key) {
         HashNode targetNode = find(key); //using the findkey method to find the target node
         if (targetNode == null) return null;
@@ -111,6 +115,7 @@ public class Hashmap {
         }
         return targetNode;
     }
+
 
     private int hash(String key) {
         return Math.abs(key.hashCode() % bucketSize);
