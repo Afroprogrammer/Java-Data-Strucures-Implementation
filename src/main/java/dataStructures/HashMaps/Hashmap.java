@@ -13,8 +13,8 @@ public class Hashmap {
             this.value = value;
         }
     }
-    //creating hash table to maintain this the hashNode in the hash map
 
+    //creating hash table to maintain this the hashNode in the hash map
     private HashNode[] hashtable = null;
     private int bucketSize = 16;
     private int size = 0; //using it to track the size of the hashtable
@@ -34,7 +34,7 @@ public class Hashmap {
         HashNode current = hashtable[position];
         //checking to see if there is no key in the current position on the hashtable
         if (current == null) {
-            hashtable[position] = new HashNode(key, value);  //if its null put in the key value at the position
+            hashtable[position] = createHashNode(key, value);  //if its null put in the key value at the position
             size++;
         } else {
             while (current.next != null && current.key != key) {  //if the current is not null push it to the next
@@ -43,7 +43,7 @@ public class Hashmap {
             if (current.key == key) {
                 current.value = value;
             } else {
-                current.next = new HashNode(key, value);
+                current.next = createHashNode(key, value);
                 size++;
             }
             //after increase the size of the hashtable
@@ -70,7 +70,10 @@ public class Hashmap {
         size--;
         return true;
     }
-
+    //a method that creates a hashnode to be implemented by a Linkedhashmap
+      public HashNode createHashNode(String key, String value ){  //takes a key and value and creates a hashnode
+        return new HashNode(key, value);
+}
     public String get(String key){
         HashNode targetNode = find(key); //using the findkey method to find the target node
         if (targetNode ==  null) return null;
