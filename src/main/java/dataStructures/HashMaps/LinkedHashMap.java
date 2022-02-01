@@ -4,25 +4,39 @@ import dataStructures.DoublyLinkedList.DoublyLinkedList;
 
 public class LinkedHashMap  extends Hashmap {
 
-    class LinkedHashNode extends Hashmap.HashNode{
+    class LinkedHashNode extends Hashmap.HashNode {
         LinkedHashNode after;   //micking the doubly linked properties here.. before and after nodes
         LinkedHashNode before;
 
-        public LinkedHashNode(String key, String value){
+        public LinkedHashNode(String key, String value) {
             super(key, value);
         }
-
+    }
         LinkedHashNode head;  //node pointers to track things in our linkedHashmap
         LinkedHashNode tail;
 
-    }
+        @Override
+        public HashNode createHashNode(String key, String value ) {
+            LinkedHashNode newNode = new LinkedHashNode(key, value);
+            nodeLinking(newNode);
+            return newNode;
+        }
+        private void nodeLinking(LinkedHashNode current){
+            if (head == null) {
+                head = tail = current;
+            } else {
+                tail.after = current;
+                current.before = tail;
+                tail = current;
+            }
+        }
 
-    public HashNode createHashNode(String key, String value ) {
-       LinkedHashNode newNode = new LinkedHashNode(key, value);
-       return newNode;
-    }
 
-    //creating a method to maintain order after node insertion
+
+
+
+    // a method to add a node to our doubly linked list
+
 
 
     public static void main(String[] args) {
