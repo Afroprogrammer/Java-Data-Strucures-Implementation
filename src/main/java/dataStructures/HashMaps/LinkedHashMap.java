@@ -32,6 +32,26 @@ public class LinkedHashMap  extends Hashmap {
         }
 
     @Override
+    public void removeNode(HashNode current) {
+        LinkedHashNode newNode = (LinkedHashNode) current;
+         LinkedHashNode prevNode = ((LinkedHashNode) current).before;
+        LinkedHashNode nextNode = ((LinkedHashNode) current).after;
+
+        if (current == head) {
+            head = head.after;
+            head.before = null;
+        } else if (current == tail) {
+            tail = tail.after;
+            tail.before = null;
+        } else {
+            prevNode.after = nextNode;
+            nextNode.before = prevNode;
+        }
+        ((LinkedHashNode) current).after = ((LinkedHashNode) current).before = null;
+        super.removeNode(current);
+    }
+
+    @Override
     public String toString() {
         StringBuffer buf = new StringBuffer();
         LinkedHashNode currentPointerNode = head;
@@ -57,9 +77,9 @@ public class LinkedHashMap  extends Hashmap {
         map.put("four", "4");
         map.put("five", "5");
         map.put("six", "6");
-//        System.out.println("----------BEFORE REMOVING----------------");
-//        System.out.println(map);
-//        map.remove("one");
+        System.out.println("----------BEFORE REMOVING----------------");
+        System.out.println(map);
+        map.remove("one");
 //        System.out.println("----------AFTER REMOVING----------------");
         System.out.println(map);
 
