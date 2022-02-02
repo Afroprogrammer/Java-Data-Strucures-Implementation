@@ -33,6 +33,19 @@ public class BinarySearchTree {
         }
         return root;
     }
+    //creating a traversal order of searching the root
+    public void inOrder(){
+        inOrderByNode(root);
+        System.out.println();
+    }
+
+    private void inOrderByNode(Node root) {
+        if(root != null){
+            inOrderByNode(root.left);
+            System.out.println(root.data+" ");
+            inOrderByNode(root.right);
+        }
+    }
 
 
     public static void main(String[] args) {
