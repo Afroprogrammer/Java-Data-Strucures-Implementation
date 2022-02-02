@@ -1,0 +1,13 @@
+Binary Search tree
+its a non linear data structure it a tree that keeps their key in a sorted order
+//properties
+- A node has at most two children the size of the child at the right has to be more or equal to the size
+of the parent node
+- The size of a child node at the left side should be equal or less to to size of its parent node
+-Searching through the binary tree takes you log of n time
+
+//Application of a binary tree
+
+** Implementing a dictionary
+** Used  for searching algorithm
+** Multi level indexing of a Database
