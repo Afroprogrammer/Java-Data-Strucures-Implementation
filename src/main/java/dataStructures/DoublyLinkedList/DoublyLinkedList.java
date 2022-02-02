@@ -84,7 +84,8 @@ public class DoublyLinkedList {
             head = head.next;   //head element would point to the next element
             head.prev = null;     //previous would be set to null
         } else if (current == tail) {
-            tail = tail.next;
+            previousNode.next = null;
+            tail = previousNode;
             tail.prev = null;
         } else {
             previousNode.next = nextNode;  //make the next and previous node next point to the nextNode
@@ -188,6 +189,9 @@ public class DoublyLinkedList {
         System.out.println(ddl);
         System.out.println("removing the a node at 0 index position");
         ddl.remove(0);
+        System.out.println(ddl);
+        System.out.println("removing the a node at 5 last  index position");
+        ddl.remove(6);
         System.out.println(ddl);
 
     }
