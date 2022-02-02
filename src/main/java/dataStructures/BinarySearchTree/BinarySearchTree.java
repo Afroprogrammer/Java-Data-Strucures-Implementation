@@ -2,7 +2,7 @@ package dataStructures.BinarySearchTree;
 
 public class BinarySearchTree {
 
-    private class Node{
+    class Node{
         int data;
         Node right;
         Node left;
@@ -35,6 +35,9 @@ public class BinarySearchTree {
     }
     //creating a traversal order of searching the root
     public void inOrder(){
+        if(root != null){
+            System.out.print("Inorder traversal: ");
+        }
         inOrderByNode(root);
         System.out.println();
     }
@@ -42,7 +45,7 @@ public class BinarySearchTree {
     private void inOrderByNode(Node root) {
         if(root != null){
             inOrderByNode(root.left);
-            System.out.println(root.data+" ");
+            System.out.print(root.data+" ");
             inOrderByNode(root.right);
         }
     }
@@ -50,5 +53,11 @@ public class BinarySearchTree {
 
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
+        bst.add(20);
+        bst.add(30);
+        bst.add(40);
+        bst.inOrder();
+
+
     }
 }
