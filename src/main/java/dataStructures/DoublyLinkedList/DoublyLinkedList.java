@@ -2,10 +2,10 @@ package dataStructures.DoublyLinkedList;
 
 public class DoublyLinkedList {
     //creating the properties of the Linked List
-    static class Node {
-        int data;  //stores the data
-        Node next;  // stores the pointer to the next
-        Node prev;  //stores a pointer to the previous node
+    private class Node {
+        private int data;  //stores the data
+        private Node next;  // stores the pointer to the next
+        private Node prev;  //stores a pointer to the previous node
 
         //creating a constructor for our node class to take in data
         public Node(int data) {
@@ -116,8 +116,9 @@ public class DoublyLinkedList {
         } else {
             previousNode.next = nextNode;  //make the next and previous node next point to the nextNode
             nextNode.prev = previousNode;  //make the next node's previous point to the previous node
-            size--; //decrease the size;
         }
+        currrentNode.next = currrentNode.prev = null;
+        size--; //decrease the size;
 
     }
 
