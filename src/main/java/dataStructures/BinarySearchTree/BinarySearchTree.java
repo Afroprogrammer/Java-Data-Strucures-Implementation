@@ -12,7 +12,11 @@ class Node{
 }
 public class BinarySearchTree {
 
+    TreeDiagram treeDiagram;
     Node root;    //a property of the binary search tree class
+    public BinarySearchTree(){
+        this.treeDiagram = new TreeDiagram();
+    }
     //add method of the binary tree
     public void add(int data){
         root = addToNode(root, data);     //adding using the recursion method
@@ -37,29 +41,34 @@ public class BinarySearchTree {
     }
 
     private Node removeNode(Node root, int data) {
-        if(root == null ){       //if the passed in root is null return root
+        if (root == null) {
             return root;
         }
-        if(data < root.data){     //if the data is lesser than the root
-            root.left = removeNode(root.left, data);
-        } else if (data > root.data){
-            root.right = removeNode(root.right , data);
-        } else{
-            if(root.left == null){
-                return root.right;
-            }else if(root.right == null){
-                return root.left;
-            } else {    //this condition happens when there is data in both child nodes
-               int minValue = findMinValue(root.right);  // find the minimum value from the right side of the node
-                //update minimum value with the target node
-                //remove the minimum value from the right side
+            if (data < root.data) {
+                root.left = removeNode(root.left, data);
+            } else if (data > root.data) {
+                root.right = removeNode(root.right, data);
+            } else {
+                if (root.left == null) {
+                    return root.right;
+                } else if (root.right == null) {
+                    return root.left;
+                } else {
+                    int minValue = findMinValue(root.right);
+                System.out.println("right side minimum value : " + minValue) ;
+                root.data = minValue; //update minimum value with the target node
+                root.right = removeNode(root.right, minValue); //remove the minimum value from the right side
+//
+//
 
-            }
+                }
         }
         return root;
     }
 
-    private int findMinValue(Node right) {
+
+//
+    private int findMinValue(Node root) {
         int minVal = root.data;
         root = root.left;
         while (root != null){
@@ -76,6 +85,7 @@ public class BinarySearchTree {
         }
         inOrderByNode(root);
         System.out.println();
+        treeDiagram.print(root);
     }
 
     private void inOrderByNode(Node root) {
@@ -92,17 +102,14 @@ public class BinarySearchTree {
         bst.add(20);
         bst.add(30);
         bst.add(10);
-        bst.inOrder();
         bst.add(5);
-        bst.inOrder();
         bst.add(16);
-        bst.inOrder();
         bst.add(24);
         bst.inOrder();
-//        bst.remove(30);
-//        bst.inOrder();
-//        bst.remove(5);
-//        bst.inOrder();
+        bst.remove(20);
+        bst.inOrder();
+        bst.remove(24);
+        bst.inOrder();
 
 
 
