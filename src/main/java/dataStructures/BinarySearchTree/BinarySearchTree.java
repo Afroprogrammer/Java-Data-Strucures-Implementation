@@ -1,5 +1,4 @@
 package dataStructures.BinarySearchTree;
-
 class Node{
     int data;
     Node right;
@@ -110,7 +109,6 @@ public class BinarySearchTree {
         bst.inOrder();
         bst.remove(24);
         bst.inOrder();
-
 
 
 
