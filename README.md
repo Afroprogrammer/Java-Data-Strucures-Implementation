@@ -18,3 +18,4 @@ I assume that the reader knows Java at an intermediate level, i would do my best
 * [Doubly LinkedList](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/DoublyLinkedList/DoublyLinkedList.java)
 * [HashMap](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/HashMaps/Hashmap.java)
 * [LinkedHashMap](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/HashMaps/LinkedHashMap.java)
+* [BinarySearchTree](https://github.com/Afroprogrammer/Java-Data-StrucuresImplementation/blob/master/src/main/java/dataStructures/BinarySearchTree/BinarySearchTree.java)
