@@ -41,8 +41,8 @@ public class LinkedHashMap  extends Hashmap {
             head = head.after;
             head.before = null;
         } else if (current == tail) {
-            tail = tail.after;
-            tail.before = null;
+            prevNode.after = tail.after;
+            tail = prevNode;
         } else {
             prevNode.after = nextNode;
             nextNode.before = prevNode;
@@ -80,9 +80,12 @@ public class LinkedHashMap  extends Hashmap {
         System.out.println("----------BEFORE REMOVING----------------");
         System.out.println(map);
         map.remove("one");
-//        System.out.println("----------AFTER REMOVING----------------");
+        System.out.println("----------AFTER REMOVING----------------");
         System.out.println(map);
-
+        System.out.println("---------- REMOVING LAST INDEX ----------------");
+        map.remove("six");
+        System.out.println("----------AFTER REMOVING LAST INDEX----------------");
+        System.out.println(map);
 
     }
 }
