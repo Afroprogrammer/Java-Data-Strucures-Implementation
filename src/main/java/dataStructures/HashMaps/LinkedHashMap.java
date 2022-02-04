@@ -41,7 +41,7 @@ public class LinkedHashMap  extends Hashmap {
             head = head.after;
             head.before = null;
         } else if (current == tail) {
-            prevNode.after = tail.after;
+            prevNode.after = null;
             tail = prevNode;
         } else {
             prevNode.after = nextNode;
