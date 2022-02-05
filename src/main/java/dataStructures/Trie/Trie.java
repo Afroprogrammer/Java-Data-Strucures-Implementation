@@ -56,6 +56,10 @@ public class Trie {
         }
         return current;
     }
+    public boolean search(String word){
+        TrieNode node = getNode(word);
+        return node != null && node.isWord;
+    };
 
     public static void main(String[] args) {
         Trie newTrie = new Trie();
