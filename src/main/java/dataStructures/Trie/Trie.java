@@ -43,6 +43,12 @@ public class Trie {
 
     }
 
+    public boolean startsWith(String prefix){
+        TrieNode node = getNode(prefix);
+        return node != null;
+    }
+
+
     private TrieNode getNode(String word){
         TrieNode current = root;
         for(int i = 0; i < word.length(); i++){
