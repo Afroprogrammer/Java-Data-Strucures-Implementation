@@ -1,0 +1,20 @@
+//Bubble Sort
+
+its a simple in-place, comparison based stable sorting algorithm which repeatedly steps through and unsorted list
+compares adjacent elements and swaps them if they are in a wrong order.
+
+//Time Space Complexity of Bubble sort
+
+Best case  - O(n)  -- when the list given is already sorted
+
+Worst case - O(n^2)
+
+Average case -  O(n^2)
+
+Space Complexity - 0(1)
+
+//Use cases
+
+Its generically a bad sorting algorithm and should not be used in computer science
+-Its used for teaching
+-For error checking in computer science
