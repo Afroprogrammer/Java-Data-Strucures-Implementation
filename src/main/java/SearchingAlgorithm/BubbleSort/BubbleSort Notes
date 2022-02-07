@@ -15,6 +15,6 @@ Space Complexity - 0(1)
 
 //Use cases
 
-Its generically a bad sorting algorithm and should not be used in computer science
+Its generically a bad sorting algorithm and should not be used in computer science because it use nested loops
 -Its used for teaching
 -For error checking in computer science
