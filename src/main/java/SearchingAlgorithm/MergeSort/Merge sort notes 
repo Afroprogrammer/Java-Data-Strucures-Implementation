@@ -1,0 +1,14 @@
+//Merge Sort
+
+it is a stable comparison based recursive, divide and conquer algorithom which repeatedly
+breaks down a list of elements into smaller and smaller parts then slowly puts it together
+in a sorted manner,
+
+//Big O notations
+
+//time complexities
+Best case - O(nlogn)
+Average case - O(nlogn)
+Worst case - O(nlogn)
+
+Space complexity O(n) it would create space for each element in the array
