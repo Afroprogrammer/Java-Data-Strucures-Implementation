@@ -23,7 +23,34 @@ public class MergeSort {
 
         mergeSort(leftHalf);
         mergeSort(rightHalf);
+    }
 
+
+    private static void merge ( int [] inputArray, int [] left, int [] right){
+        int i = 0;
+        int  j = 0;
+        int k = 0;      //variables set to zero to track the iteration
+        while( i < left.length && j < right.length){    //while the count is less
+            if (left[i] <= right[i]) {
+                inputArray[k] = left[i];
+                i++;
+            } else
+            {
+                inputArray[k] = right[j];
+                j++;
+            }
+            k++;
+        }
+         while( i < left.length){
+             inputArray[k] = left[i];
+             k++;
+             i++;
+         }
+        while( j < right.length){
+            inputArray[k] = right[j];
+            k++;
+            j++;
+        }
 
     }
 
