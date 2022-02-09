@@ -3,7 +3,7 @@ its an in-place comparison based unstable algorithm which is used to sort an uns
 
 Big O for selection sort
 
-Time complexity - Best case - 0(n^2)
+Time complexity -  Best case - 0(n^2)
                    Average  case - 0(n^2)
                    worst case - 0(n^2)
 

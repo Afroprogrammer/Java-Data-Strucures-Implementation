@@ -1,4 +1,4 @@
-package SearchingAlgorithm;
+package SearchingAlgorithm.SelectionSort;
 
 public class SelectionSort {
 void sort(int arr[])
