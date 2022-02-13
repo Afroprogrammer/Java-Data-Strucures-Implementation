@@ -8,7 +8,7 @@ I assume that the reader knows Java at an intermediate level, i would do my best
 
 ## Table of Contents
 - [Data Structures](#data-structures)
-- Algorithms
+- [Algorithms](Algorithms)
 
 ## Data Structures
 * [Arrays](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/Arrays/AnArray.java)
@@ -23,3 +23,9 @@ I assume that the reader knows Java at an intermediate level, i would do my best
 * [Trie](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/Trie/Trie.java)
 
 ## Algorithms
+==============================
+## Sorting Algorithms
+* [Bubble Sort](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/SearchingAlgorithm/BubbleSort/BubbleSort.java)
+* [Merge Sort](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/SearchingAlgorithm/MergeSort/MergeSort.java)
+* [Quick Sort](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/SearchingAlgorithm/QuickSort/QuickSort.java)
+* [Selection Sort](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/tree/master/src/main/java/SearchingAlgorithm/SelectionSort)
