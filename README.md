@@ -8,7 +8,7 @@ I assume that the reader knows Java at an intermediate level, i would do my best
 
 ## Table of Contents
 - [Data Structures](#data-structures)
-- [Algorithms](Algorithms)
+- [Algorithms](#algorithms)
 
 ## Data Structures
 * [Arrays](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/Arrays/AnArray.java)
