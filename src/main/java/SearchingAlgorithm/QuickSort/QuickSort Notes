@@ -1,0 +1,25 @@
+// quickSort Notes
+its an efficient in-place divide and conquer algorithm which sorts elements by partitioning the data set into
+two parts, then recursively sorting each side independently
+
+///Big O of quick sort
+//Time complexity
+-Best case - O(nlogn)
+-Average case - O(n log n)
+-Worst O(n^2)
+///Space Complexity
+///Worst case - O(log n)
+
+FAQ?
+- How does the partition method works in quick sort?
+Ans - a number is randomly chosen from the array this number is also known as the pivot
+and all numbers lesser than the chosen number or Pivot is grouped to the
+left and the numbers greater than the pivot is grouped at the right side of the pivot
+
+- How Do we determine the element to use as the pivot for the quick sort?
+Ans: Any number in the bounds of the array can be chose, but in order to effectively partition the array,
+the pivot chosen is moved to the last index of the array.
+
+- What are the advantages of using quick sort over merger sort \
+its faster to use quick sort on a small data set as compared to merge sort
+it uses less memory as compared to merge sort
