@@ -142,6 +142,7 @@ public class LinkedList {
         linkedList.add(30);
         linkedList.add(90,0);
         linkedList.add(100,3);
+        System.out.println(linkedList.get(3));;
         System.out.println("about to remove  data at the first position");
         linkedList.remove(0);
         System.out.println("about to remove  data at the second position");
