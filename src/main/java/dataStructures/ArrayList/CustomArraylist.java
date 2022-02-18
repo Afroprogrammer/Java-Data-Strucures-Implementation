@@ -116,7 +116,7 @@ public String toString() {
         System.out.println(arraylist + "after inserting");
         arraylist.add(79);
         System.out.println(arraylist);
-        arraylist.remove(0);
+        arraylist.remove(2);
         System.out.println(arraylist);
     }
 }
