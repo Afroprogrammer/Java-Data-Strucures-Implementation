@@ -4,16 +4,16 @@ public class BubbleSort {
 
     public static int[] sort(int[] array) {
           int i , j , temp = 0;
-        for ( i = 0; i < array.length - 1; i++) {
-            for ( j =  1; j < array.length - i ; j++) {
-                if (array[j-1] > array[j]) {
-                    temp = array[j - 1];
-                    array[j - 1] = array[j];
-                    array[j] = temp;
+        for ( i = 0; i < array.length - 1; i++) {   //O(n) code is O(n) here
+            for ( j =  1; j < array.length - i ; j++) { //O(n - j + i)
+                if (array[j-1] > array[j]) {  //O(1)
+                    temp = array[j - 1];  //O(1)
+                    array[j - 1] = array[j];   //O(1)
+                    array[j] = temp;    //O(1)
                 }
             }
         }
-        return array;
+        return array;    //O(1)
     }
 
     public static void printArray(int [] array){
