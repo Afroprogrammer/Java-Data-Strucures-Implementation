@@ -1,4 +1,4 @@
-Java : Data Structures Implementations :chart_with_downwards_trend::arrows_counterclockwise:
+Java : Data Structures Implementations & Alogorithms :chart_with_downwards_trend::arrows_counterclockwise:
 ==============================
 
 This is a collection of data structures implementation in Java i have complied in a short period of time for my professional life and interview purposes. The code isn't optimized but is written to be correct and readable. The algorithms and data structures are tested and, unless noted, believed to be correct.
@@ -8,6 +8,7 @@ I assume that the reader knows Java at an intermediate level, i would do my best
 
 ## Table of Contents
 - [Data Structures](#data-structures)
+- [Algorithms](#algorithms)
 
 ## Data Structures
 * [Arrays](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/Arrays/AnArray.java)
@@ -20,3 +21,11 @@ I assume that the reader knows Java at an intermediate level, i would do my best
 * [LinkedHashMap](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/HashMaps/LinkedHashMap.java)
 * [BinarySearchTree](https://github.com/Afroprogrammer/Java-Data-StrucuresImplementation/blob/master/src/main/java/dataStructures/BinarySearchTree/BinarySearchTree.java)
 * [Trie](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/dataStructures/Trie/Trie.java)
+
+## Algorithms
+==============================
+## Sorting Algorithms
+* [Bubble Sort](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/SearchingAlgorithm/BubbleSort/BubbleSort.java)
+* [Merge Sort](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/SearchingAlgorithm/MergeSort/MergeSort.java)
+* [Quick Sort](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/blob/master/src/main/java/SearchingAlgorithm/QuickSort/QuickSort.java)
+* [Selection Sort](https://github.com/Afroprogrammer/Java-Data-Strucures-Implementation/tree/master/src/main/java/SearchingAlgorithm/SelectionSort)
