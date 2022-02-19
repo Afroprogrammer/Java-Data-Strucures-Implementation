@@ -1,4 +1,4 @@
-package dataStructures.heap;
+package SearchingAlgorithm.HeapSort;
 
 import java.util.Random;
 

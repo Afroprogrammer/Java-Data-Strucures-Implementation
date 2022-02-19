@@ -1,0 +1,12 @@
+Heap Sort is a comparison based sorting algorithm whose functionality is based on the binary heap data structure.
+if you are giving an array to represent it as a heap.. you build it by finding the node of the last node that is a leaf
+use that node as your heap length and you recursively sort the heap from bottom to top
+
+//Time complexity of a heap
+    Best case - O(nlog n);
+    Average case - O(nlog n);
+    Worst case - O(nlog n);
+// Space Complexity
+    Worst case - O(1);q
+
+    Heapify takes O(n)
