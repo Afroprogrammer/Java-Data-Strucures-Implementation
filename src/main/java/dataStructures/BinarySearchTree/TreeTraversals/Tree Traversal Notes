@@ -1,0 +1,14 @@
+The popular tree traversals are the inorder, pre-order traversals , post order traversal and BFS or level order
+traversals.
+
+In the inorder traversal.. Traversing the tree goes as follows:
+LeftNode ==> rootNode ===> Left node
+
+Post order traversal
+LeftNode ===> Right Node ===> RootNode
+
+Pre Order Traversal
+
+LeftNode ===> RightNode ===> Root node
+these traversals can use the recursion method or use the stack method to represent.
+Traversing takes OLog n time ;
