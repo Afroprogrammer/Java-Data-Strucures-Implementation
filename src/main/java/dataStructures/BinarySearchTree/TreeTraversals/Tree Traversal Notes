@@ -12,3 +12,8 @@ Pre Order Traversal
 LeftNode ===> RightNode ===> Root node
 these traversals can use the recursion method or use the stack method to represent.
 Traversing takes OLog n time ;
+
+To represent a Tree.. in java
+We need the Node class that would hold the data and two other Nodes pointing to the left and the right.
+
+Also we would need a tree class to hold all the nodes
