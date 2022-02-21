@@ -1,9 +1,4 @@
 package dataStructures.Trie;
-
-import org.w3c.dom.Node;
-
-import java.util.Locale;
-
 public class Trie {
     TrieNode root;
 
