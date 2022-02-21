@@ -16,4 +16,7 @@ Traversing takes OLog n time ;
 To represent a Tree.. in java
 We need the Node class that would hold the data and two other Nodes pointing to the left and the right.
 
-Also we would need a tree class to hold all the nodes
+Also we would need a tree class to hold all the nodes..
+we instantiate a root of type Node and point it to the first node.. and we keep adding it the tree as specfied to the
+binary tree data structure rule
+
