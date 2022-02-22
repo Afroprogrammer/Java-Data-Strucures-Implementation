@@ -1,5 +1,8 @@
 package dataStructures.BinarySearchTree.TreeTraversals;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Tree {
     public static void main(String[] args) {
         Node<String> A = new Node<String>("A");
@@ -34,6 +37,9 @@ public class Tree {
         System.out.println(" ");
         System.out.println("--PostOrder Traversal------");
         PostOderTraversal(A);  //expected: : H I D J E B F K G C A
+        System.out.println(" ");
+        System.out.println("--levelOrder Traversal------");
+        levelOrderTraversal(A);  //expected:  A B C D E F G H I J K
     }
 
     /**
@@ -43,12 +49,12 @@ public class Tree {
      * //Calling preOrderTraverse for the right node
      */
     public static <T> void preOrderTraversal(Node<T> node) {
-        if (node != null) {
-            System.out.print(node.data + " ");
+        if (node == null){
+            return;
+        }
+        System.out.print(node.data + " ");
             preOrderTraversal(node.left);
             preOrderTraversal(node.right);
-        }
-
     }
 
     /**
@@ -79,7 +85,33 @@ public class Tree {
             System.out.print(node.data + " ");
         }
 
+    }
 
+    /**
+     * implementing the level order traversal in a binary three we need to use the
+     * Queue data structure to implement the data structure
+     */
+
+
+    public static <T> void levelOrderTraversal(Node<T> node){
+        if (node == null){
+            return;
+        }
+        Queue<Node<T>> queue = new LinkedList<>();
+        queue.offer(node);
+        while (!queue.isEmpty()){
+            Node <T> temp = queue.poll();
+            System.out.print(temp.data + " ");
+
+            if(temp.left != null){
+                queue.offer(temp.left);
+            }
+
+
+            if(temp.right != null){
+                queue.offer(temp.right);
+            }
+        }
     }
 }
 
