@@ -1,0 +1,34 @@
+Graph is a non linear Data structure consisting of node and edges
+finite set of nodes(Vertices are connected by the edges)
+
+--It has multiple starting points
+
+//Types of Graphs
+Undirected Graphs.
+  A graph in which the direction you traverse the nodes is not important
+
+  --its usually is not indicated with arrows
+  example: facebook friendship network.
+
+Directed Graph
+The direction you would traverse the nodes are important
+arrows represent how you traverse the nodes.
+Example
+Friendship network on instagram
+
+
+********Undirected Graph***********
+it can be represented as matrix and represented as a list
+in the list representation you can use a nested array for it
+for the List representation you can use a linked list to represent
+
+
+//Other types of graphs are
+
+Cyclic Graph
+
+Acyclic Graph
+
+weighted graph
+
+Unweighted Graph
