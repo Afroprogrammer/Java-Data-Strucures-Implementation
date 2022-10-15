@@ -1,36 +1,40 @@
 package dataStructures.Trie;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Trie {
     TrieNode root;
 
-    public Trie(){
+    public Trie() {
         root = new TrieNode(); // root is empty
     }
-    private class TrieNode{
-        TrieNode [] children;
+
+    private class TrieNode {
+        TrieNode[] children;
         boolean isWord;
         int capacity = 26;
 
-        public TrieNode(){
+        public TrieNode() {
             this.children = new TrieNode[capacity];  //capacity for storing english words
             this.isWord = false;
         }
     }
 
-    public void insert (String word){
-        if(word == null || word.isBlank()|| word.isEmpty()){
-            throw  new IllegalArgumentException("invalid input ");
+    public void insert(String word) {
+        if (word == null || word.isBlank() || word.isEmpty()) {
+            throw new IllegalArgumentException("invalid input ");
         }
         word = word.toLowerCase();
         TrieNode current = root;
-        for (int i = 0; i < word.length(); i++){
+        for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
-            int index = c -'a';   //finding the index of the trie node
-            if (current.children[index] == null){
+            int index = c - 'a';   //finding the index of the trie node
+            if (current.children[index] == null) {
                 TrieNode node = new TrieNode();
                 current.children[index] = node;
                 current = node;
-            }else
-            {
+            } else {
                 current = current.children[index];
             }
             current.isWord = true;
@@ -38,20 +42,20 @@ public class Trie {
 
     }
 
-    public boolean startsWith(String prefix){
+    public boolean startsWith(String prefix) {
         TrieNode node = getNode(prefix);
         return node != null;
     }
 
 
-    private TrieNode getNode(String word){
+    private TrieNode getNode(String word) {
         TrieNode current = root;
-        for(int i = 0; i < word.length(); i++){
+        for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
             int index = c - 'a';
-            if(current.children[index] == null){
+            if (current.children[index] == null) {
                 return null;
-            }else{
+            } else {
                 current = current.children[index];
             }
         }
